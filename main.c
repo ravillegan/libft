@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnequ.c                                       :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asantiag <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/12 00:36:15 by asantiag          #+#    #+#             */
-/*   Updated: 2019/04/12 21:55:30 by asantiag         ###   ########.fr       */
+/*   Created: 2019/04/12 22:32:20 by asantiag          #+#    #+#             */
+/*   Updated: 2019/04/12 22:35:31 by asantiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <string.h>
 #include "libft.h"
+#include <stdio.h>
 
-int		ft_strnequ(char const *s1, char const *s2, size_t n)
+int	main()
 {
-	if (ft_strncmp(s1, s2, n) == 0)
-		return (1);
-	return (0);
+	printf("%s", ft_strtrim("     jopa ef 1e   	"));
 }
