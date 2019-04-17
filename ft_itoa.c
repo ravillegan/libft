@@ -1,28 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asantiag <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/12 22:32:20 by asantiag          #+#    #+#             */
-/*   Updated: 2019/04/14 20:18:14 by asantiag         ###   ########.fr       */
+/*   Created: 2019/04/17 19:00:37 by asantiag          #+#    #+#             */
+/*   Updated: 2019/04/17 19:08:38 by asantiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include "libft.h"
-#include <stdio.h>
+#include <stdlib.h>
 
-int	main()
+char	*ft_itoa(int n)
 {
-	int		i = 3;
-	char	**h;
+	int		tmp;
+	char	*fresh;
+	int		size;
+	int		flag;
 
-	h = ft_strsplit("I*love*you", '*');
-	while (*h)
+	size = 0;
+	flag = 0;
+	tmp = n;
+	if (n < 0)
 	{
-		printf("%s\n", *h);
-		h++;
+		tmp = -n;
+		flag++;
 	}
+	while (tmp / 10)
+	{
+		tmp %= 10;
+		size++;
+	}
+	fresh = (char *)malloc(size + flag + 1);
+	if (!fresh)
+		return (0);
+	
 }
