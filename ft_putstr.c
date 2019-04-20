@@ -1,31 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asantiag <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/11 18:22:55 by asantiag          #+#    #+#             */
-/*   Updated: 2019/04/20 03:44:09 by asantiag         ###   ########.fr       */
+/*   Created: 2019/04/20 02:47:49 by asantiag          #+#    #+#             */
+/*   Updated: 2019/04/20 02:53:54 by asantiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
-int		ft_strncmp(const char *s1, const char *s2, size_t n)
+void	ft_putstr(char const *s)
 {
-	const unsigned char *tmp1;
-	const unsigned char *tmp2;
-
-	tmp1 = (const unsigned char *)s1;
-	tmp2 = (const unsigned char *)s2;
-	while (n-- && *tmp1 && *tmp2)
-		if (*tmp1 != *tmp2)
-			return (*tmp1 - *tmp2);
-		else
-		{
-			tmp1++;
-			tmp2++;
-		}
-	return (0);
+	while (*s)
+		ft_putchar(*s++);
 }

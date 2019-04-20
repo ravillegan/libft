@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: asantiag <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/12 21:38:36 by asantiag          #+#    #+#             */
-/*   Updated: 2019/04/12 22:36:59 by asantiag         ###   ########.fr       */
+/*   Created: 2019/04/12 01:29:01 by asantiag          #+#    #+#             */
+/*   Updated: 2019/04/13 13:13:03 by asantiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strtrim(char const *s)
 	p = (char *)s;
 	while (*p && (*p == ' ' || *p == '\t' || *p == '\n'))
 		p++;
-	if(!(*p))
+	if (!(*p))
 		return ("");
 	start = p;
 	while (*p)

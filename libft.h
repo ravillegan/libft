@@ -6,7 +6,7 @@
 /*   By: asantiag <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/10 16:52:47 by ctammi            #+#    #+#             */
-/*   Updated: 2019/04/17 19:01:14 by asantiag         ###   ########.fr       */
+/*   Updated: 2019/04/20 02:50:08 by asantiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,5 +58,7 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s);
 char	**ft_strsplit(char const *s, char c);
 char	*ft_itoa(int n);
+void	ft_putchar(char c);
+void	ft_putstr(char const *s);
 
 #endif

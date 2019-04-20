@@ -1,28 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asantiag <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/12 22:32:20 by asantiag          #+#    #+#             */
-/*   Updated: 2019/04/14 20:18:14 by asantiag         ###   ########.fr       */
+/*   Created: 2019/04/20 02:43:16 by asantiag          #+#    #+#             */
+/*   Updated: 2019/04/20 02:47:27 by asantiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include "libft.h"
-#include <stdio.h>
+#include <unistd.h>
 
-int	main()
+void	ft_putchar(char c)
 {
-	int		i = 3;
-	char	**h;
-
-	h = ft_strsplit("I*love*you", '*');
-	while (*h)
-	{
-		printf("%s\n", *h);
-		h++;
-	}
+	write(1, &c, 1);
 }

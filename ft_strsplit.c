@@ -5,52 +5,52 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: asantiag <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/12 22:47:10 by asantiag          #+#    #+#             */
-/*   Updated: 2019/04/16 11:51:53 by asantiag         ###   ########.fr       */
+/*   Created: 2019/04/13 13:13:50 by asantiag          #+#    #+#             */
+/*   Updated: 2019/04/13 15:51:33 by asantiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-//# define MISSING while (*s == c) s++;
-#include <stdlib.h>
 #include "libft.h"
+#include <stdlib.h>
 #include <string.h>
 
 char	**ft_strsplit(char const *s, char c)
 {
-	size_t	n;
 	char	**p;
+	size_t	n;
 	char	*tmp;
-	size_t	i;
+	int		i;
 	char	**ret;
-	
-	n = 0;
+
+	i = 0;
 	tmp = (char *)s;
 	while (*tmp)
-	{
-		if (*tmp == c && *(tmp - 1) != c && *(tmp + 1) != c)
-			n++;
-		tmp++;
-	}
-	p = (char **)malloc(n + 1);
+		if (*tmp++ == c)
+			i++;
+	p = (char **)malloc(sizeof(char *) * i + 1);
 	if (!p)
 		return (0);
 	ret = p;
-	while (n-- + 1)
+	while (*s)
 	{
 		i = 0;
+		n = 0;
 		tmp = (char *)s;
-		while (*tmp++ != c)
-			i++;
-		if (i == 0)
-			continue ;
-		*p = (char *)malloc(i + 1);
+		while (*tmp && *tmp != c)
+		{
+			n++;
+			tmp++;
+		}
+		*p = (char *)malloc(sizeof(char) * n + 1);
 		if (!(*p))
 			return (0);
-		*p = ft_strncpy(*p, s, i);
-		s += i;
+		while (*s && *s != c)
+			*(*p)++ = *s++;
 		**p = '\0';
+		if (*s == c)
+			s++;
+		p++;
 	}
-	*p = NULL;
+	*p = 0;
 	return (ret);
 }

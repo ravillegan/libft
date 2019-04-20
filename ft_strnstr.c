@@ -6,7 +6,7 @@
 /*   By: asantiag <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/11 14:00:19 by ctammi            #+#    #+#             */
-/*   Updated: 2019/04/11 23:54:12 by asantiag         ###   ########.fr       */
+/*   Updated: 2019/04/20 03:50:27 by asantiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	char	*tmp2;
 	size_t	l;
 
+	if (!len)
+		return (0);
 	if (!(*needle))
 		return ((char *)haystack);
 	while (*haystack && len)

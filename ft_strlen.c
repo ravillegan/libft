@@ -6,7 +6,7 @@
 /*   By: asantiag <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/11 18:22:45 by asantiag          #+#    #+#             */
-/*   Updated: 2019/04/11 23:53:58 by asantiag         ###   ########.fr       */
+/*   Updated: 2019/04/13 14:04:43 by asantiag         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,12 @@
 
 size_t	ft_strlen(const char *s)
 {
-	size_t l;
+	size_t	l;
+	char	*tmp;
 
+	tmp = (char *)s;
 	l = 0;
-	while (*s++)
+	while (*tmp++)
 		l++;
 	return (l);
 }
